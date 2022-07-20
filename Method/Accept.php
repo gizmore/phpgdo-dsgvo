@@ -28,7 +28,7 @@ final class Accept extends Method
 		GDO_Session::set('gdo-dsgvo', 1);
 		
 		# Response
-		$response = GDT_Success::responseWith('msg_cookie_accepted');
+		$response = GDT_Success::make()->text('msg_cookie_accepted');
 		
 		# Redirect back via response
 		if ($ref = $this->gdoParameterVar('ref'))
