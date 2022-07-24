@@ -1,3 +1,6 @@
+<?php
+namespace GDO\DSGVO\tpl;
+?>
 <div id="gdo_dsgvo_panel">
   <div class="gdo_dsgvo_overlay"></div>
   <div class="gdo_dsgvo_info">

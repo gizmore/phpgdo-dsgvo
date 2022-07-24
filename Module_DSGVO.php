@@ -24,7 +24,7 @@ final class Module_DSGVO extends GDO_Module
 	{
 	    if (!GDO_Session::get('gdo-dsgvo'))
 	    {
-	        GDT_Page::$INSTANCE->bottomNav->addField(GDT_DSGVOPanel::make());
+	        GDT_Page::instance()->bottomBar()->addField(GDT_DSGVOPanel::make());
 	    }
 	}
 	
