@@ -16,6 +16,11 @@ use GDO\Core\GDT_Tuple;
  */
 final class Accept extends Method
 {
+	public function getMethodTitle()
+	{
+		return t('dsgvo');
+	}
+	
 	public function gdoParameters() : array
 	{
 		return [
