@@ -16,7 +16,7 @@ use GDO\Core\GDT_Tuple;
  */
 final class Accept extends Method
 {
-	public function getMethodTitle()
+	public function getMethodTitle() : string
 	{
 		return t('dsgvo');
 	}
