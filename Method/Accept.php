@@ -24,7 +24,7 @@ final class Accept extends Method
 	public function gdoParameters() : array
 	{
 		return [
-			GDT_Url::make('ref')->allowAll(true),
+			GDT_Url::make('_ref')->allowAll(),
 		];
 	}
 	
@@ -38,7 +38,7 @@ final class Accept extends Method
 		$response->addField(GDT_Success::make()->text('msg_cookie_accepted'));
 		
 		# Redirect back via response
-		if ($ref = $this->gdoParameterVar('ref'))
+		if ($ref = $this->gdoParameterVar('_ref'))
 		{
 			$response->addField($this->redirect($ref));
 		}

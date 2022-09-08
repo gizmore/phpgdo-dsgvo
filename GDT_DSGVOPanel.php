@@ -4,11 +4,20 @@ namespace GDO\DSGVO;
 use GDO\Core\GDT_Template;
 use GDO\Session\GDO_Session;
 use GDO\User\GDO_User;
+use GDO\Core\GDT;
 
+/**
+ * Render DSGVO information panel.
+ * 
+ * @author gizmore
+ * @version 7.0.1
+ * @since 6.7.0
+ */
 final class GDT_DSGVOPanel extends GDT_Template
 {
 	protected function __construct()
 	{
+		parent::__construct();
 	    $this->name = 'dsgvo';
 		$this->templateModule = 'DSGVO';
 		$this->templatePath = 'dsgvo.php';
@@ -23,7 +32,7 @@ final class GDT_DSGVOPanel extends GDT_Template
 				return parent::render();
 			}
 		}
-		return '';
+		return GDT::EMPTY_STRING;
 	}
 	
 }
