@@ -24,7 +24,7 @@ final class GDT_DSGVOPanel extends GDT_Template
 		$this->templatePath = 'dsgvo.php';
 	}
 
-	public function render(): string
+	public function render(): array|string|null
 	{
 		if (!GDO_User::current()->isAuthenticated())
 		{

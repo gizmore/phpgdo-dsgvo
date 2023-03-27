@@ -1,6 +1,7 @@
 <?php
 namespace GDO\DSGVO\Method;
 
+use GDO\Core\GDT;
 use GDO\Core\GDT_Tuple;
 use GDO\Core\Method;
 use GDO\Net\GDT_Url;
@@ -29,7 +30,7 @@ final class Accept extends Method
 		];
 	}
 
-	public function execute()
+	public function execute(): GDT
 	{
 		# Remember
 		GDO_Session::set('gdo-dsgvo', 1);
