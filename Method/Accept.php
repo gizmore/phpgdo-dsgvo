@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace GDO\DSGVO\Method;
 
 use GDO\Core\GDT;
@@ -11,7 +12,7 @@ use GDO\UI\GDT_Success;
 /**
  * Accept german DSGVO cookie usage.
  *
- * @version 7.0.1
+ * @version 7.0.3
  * @since 6.9.0
  * @author gizmore
  */
@@ -42,7 +43,7 @@ final class Accept extends Method
 		# Redirect back via response
 		if ($ref = $this->gdoParameterVar('_ref'))
 		{
-			$response->addField($this->redirect($ref));
+			$this->redirect($ref);
 		}
 
 		# return response
