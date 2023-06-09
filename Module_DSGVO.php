@@ -17,6 +17,13 @@ final class Module_DSGVO extends GDO_Module
 
 	public function onLoadLanguage(): void { $this->loadLanguage('lang/dsgvo'); }
 
+	public function getDependencies(): array
+	{
+		return [
+			'Session',
+		];
+	}
+
 	public function onIncludeScripts(): void
 	{
 		$this->addCSS('css/gdo-dsgvo.css');
